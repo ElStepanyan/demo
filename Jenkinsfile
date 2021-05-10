@@ -15,7 +15,11 @@ pipeline {
           
           }
       }    
- 
+     stage("push image to nexus"){
+         steps{
+         sh 'docker push nexus.local:8082/demo'
+         }
+     }
    
 }   
 }
