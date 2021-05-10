@@ -21,7 +21,7 @@ pipeline {
      sh 'mvn -B -DskipTests clean package'}
         
     }
- }
+ 
    stage("publish to nexus") {
             steps {
                 script {
