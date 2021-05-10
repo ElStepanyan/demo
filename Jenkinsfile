@@ -18,7 +18,7 @@ pipeline {
      stage("push image to nexus"){
          steps{
          sh 'docker push nexus.local:8082/demo'
-         sh 'docker run -p 8080:8080 nexus.local:8082/demo'    
+         sh 'docker run -d -p 8080:8080 nexus.local:8082/demo'    
          }
      }
    
