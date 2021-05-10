@@ -12,6 +12,7 @@ pipeline {
         NEXUS_REPOSITORY = "maven-releases"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "jenkins-user"   
+  }
 
  stages{
     stage ('Build') {
