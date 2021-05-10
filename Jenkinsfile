@@ -18,7 +18,8 @@ pipeline {
     stage ('Build') {
         steps{
 
-     sh 'mvn -B -DskipTests clean package'}
+           sh 'mvn -B -DskipTests clean package'
+        }
         
     }
  
@@ -61,14 +62,13 @@ pipeline {
                                 type: "pom"]
                             ]
                         );
-
+                    
                     } 
-                    else {
+                     else {
                         error "*** File: ${artifactPath}, could not be found";
-                    } 
-}
+                            } 
+                }
             }
    }
- }
-}
+}   
 }
