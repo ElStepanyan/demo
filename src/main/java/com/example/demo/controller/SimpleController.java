@@ -7,6 +7,9 @@ import java.time.LocalDateTime;
 
 @RestController
 public class SimpleController {
+	
+	@Value("myapp.test")
+	private String stringValue;
 
 	@RequestMapping("/current_time")
 	public String currentTime() {
@@ -15,7 +18,7 @@ public class SimpleController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Hello!";
+		return stringValue;
 	}
 
 }
